@@ -22,13 +22,12 @@ body{
 .top-message{
     line-height: 0%;
 }
-.top-message h1{
+/* .top-message h1{
     color:aqua;
-
-}
-.top-message p{
+} */
+/* .top-message p{
     color: gray;
-}
+} */
 .enter{
     color: gray;
     font-size:20px;
@@ -89,7 +88,7 @@ img{
 .three img{
     float:left;
     width:33%;
-    height:100px
+    height:100px;
     padding-right:10px;
     padding-left:10px;
 }
@@ -195,7 +194,7 @@ img{
 
 }
 
-.sale 2{
+.sale {
     padding:200px 60px 80px 60px;
 }
 .ticketgate{
