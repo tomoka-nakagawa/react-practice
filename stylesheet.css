@@ -201,3 +201,22 @@ img{
 .ticketgate{
     display: flex;
 }
+
+.flex-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-list li{
+    flex:auto;
+    width: 50%;
+}
+.menu h1{
+    font-size:18px;
+}
+
+.site-message{
+    border: 1px lightgray solid;
+    border-radius: 6px;
+    padding:20px
+}
