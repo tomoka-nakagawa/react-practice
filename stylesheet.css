@@ -16,9 +16,9 @@ body{
     align-items: center;
     border-bottom: solid 2px;
 }
-.top-icon{
+/* .top-icon{
     font-size:40px;
-}
+} */
 .top-message{
     line-height: 0%;
 }
@@ -28,20 +28,19 @@ body{
 /* .top-message p{
     color: gray;
 } */
-.enter{
+/* .enter{
     color: gray;
     font-size:20px;
     background-color: bisque;
     border-radius: 4px;
     padding: 15px 0px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; */
 }
 
 .flex-2{
     display: flex;
     justify-content: space-between;
 }
-
 .flex-1{
     display:flex;
 }
