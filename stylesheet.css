@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+body{
+    padding: 0px 100px;
+}
+
+.header-contents{
+    align-items: center;
+    border-bottom: solid 2px;
+}
+.top-icon{
+    font-size:40px;
+}
+.top-message{
+    line-height: 0%;
+}
+.top-message h1{
+    color:aqua;
+
+}
+.top-message p{
+    color: gray;
+}
+.enter{
+    color: gray;
+    font-size:20px;
+    background-color: bisque;
+    border-radius: 4px;
+    padding: 15px 0px;
+    margin-bottom: 5px;
+}
+
+.flex-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-1{
+    display:flex;
+}
+.site{
+    margin-top:20px;
+}
+
+.back{
+    color:aqua;
+}
+.share{
+    border:1px lightgray solid;
+    border-radius: 4px;
+    padding:4px 8px;
+    color:black
+}
+.share:hover{
+    background-color: lightgrey;
+}
+.nice{
+    border:1px lightgray solid;
+    border-radius: 4px;
+    padding:4px 8px;
+    color:black
+}
+.nice:hover{
+    background-color: lightgrey;
+
+}
+.exit-btn{
+    display:flex;
+    justify-content: space-between;
+}
+
+.sitetop{
+    display: flex;
+
+}
+img{
+    width:600px;
+    height:600px;
+}
+
+.three img{
+    float:left;
+    width:33%;
+    height:100px
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.sitetop-detail{
+    padding-left: 40px;
+
+}
+.wrap-list{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.wrap-list li{
+    flex:auto;
+    width:50%;
+}
+
+.contents-detail{
+    border:1px lightgray solid;
+    padding:15px 20px;
+    height:500px;
+    border-radius: 10px;
+}
+
+
+
+.ticket-gaiyou{
+      border:1px lightgray solid;
+    border-radius: 10px;
+    width:900px;
+    height: 600px;
+    padding: 20px 20px;
+    font-size:10px;
+    margin-bottom: 10px;
+
+}
+
+.ticket-sale{
+    width:855px;
+    height: 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.ticket-copy:hover{
+    box-shadow: 1px 5px lightgray;
+}
+.ticket-detail{
+    padding:20px 20px;
+    min-width: 0;
+}
+.ticket-detail p{
+    color:lightgray;
+    font-size: 14px;
+    line-height: 2px;
+    width: 850px;
+}
+
+.jouhou{
+    display:flex;
+    float:left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.jouhou p{
+    border: 1px lightgray solid;
+    border-radius: 3px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.nedan{
+    color: lightskyblue;
+    font-size: 40px;
+    margin-right:20px
+    
+}
+.ticket-copy{
+  border: 1px lightgray solid;
+  border-radius: 6px ;
+  height: 150px;
+  margin-top: 10px;
+}
+.ticket-border{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: lightgray;
+    height: 1px;
+}
