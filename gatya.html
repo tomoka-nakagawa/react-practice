@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <link rel="stylesheet" href="stylesheet_gacha.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function MyApp() {
+            const items = [
+                { name: '薬', images: '💊', backcolor: '#ff0000' },
+                { name: '剣', images: '🗡️', backcolor: '#00ff00' },
+                { name: '王冠', images: '👑', backcolor: '#0000ff' },
+                { name: 'パン', images: '🥐', backcolor: '#ff0040' }
+            ]
+            //  ['薬', '剣', '王冠'];
+            // const images = ['💊', '🗡️', '👑'];
+            // const backcolor = ['#ff0000', '#00ff00', '#0000ff']
+            const [state, setState] = React.useState('');
+            console.log(state);
+            // const [imageState, setImageState] = React.useState('')
+            // const [backcolorState, setBackcolorState] = React.useState('')
+            const handleClick = () => {
+                console.log("handleClick")
+                const randomIndex = Math.floor(Math.random() * items.length);
+                console.log(randomIndex)
+                setState(items[randomIndex]);
+
+                // setImageState(images[randomIndex]);
+                // setBackcolorState(backcolor[randomIndex])
+
+            }
+            return (<>
+
+                <main>
+                    <div class="container">
+                        <div class="gachatop">
+                            <h1>🎰 シンプルガチャ</h1>
+                            <p>ボタンを押してランダムアイテムをゲット！</p>
+                        </div>
+                        <div class="gachabottun">
+
+
+                            <button onClick={handleClick}>🎰 ガチャを引く</button>
+                            <div style={{ backgroundColor: state.backcolor }}>
+                                <h1>アイテム：{state.name}をゲットしました</h1>
+                                <p>{state.images}</p>
+                            </div>
+
+                        </div>
+                        <div>
+
+
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+
+
+
+                </main></>);
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<MyApp />);
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this page for starting a new React project with JSX:
+      https://react.dev/learn/start-a-new-react-project
+
+      Read this page for adding React with JSX to an existing project:
+      https://react.dev/learn/add-react-to-an-existing-project
+    -->
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* -------------- */
+
+.container{
+    background-color: lightgrey;
+    text-align: center;
+    margin:0px 400px;
+}
+
+.gachatop{
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin:20px 20px;
+    text-align: center;
+    
+    
+}
