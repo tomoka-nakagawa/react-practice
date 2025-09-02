@@ -17,12 +17,13 @@
     <script type="text/babel">
 
         function MyApp() {
-            const items = [
-                { name: '薬', images: '💊', backcolor: '#ff0000' },
-                { name: '剣', images: '🗡️', backcolor: '#00ff00' },
-                { name: '王冠', images: '👑', backcolor: '#0000ff' },
-                { name: 'パン', images: '🥐', backcolor: '#ff0040' }
-            ]
+
+            // const items = [
+            //     { name: '薬', images: '💊', backcolor: '#ff0000' },
+            //     { name: '剣', images: '🗡️', backcolor: '#00ff00' },
+            //     { name: '王冠', images: '👑', backcolor: '#0000ff' },
+            //     { name: 'パン', images: '🥐', backcolor: '#ff0040' }
+            // ]
             //  ['薬', '剣', '王冠'];
             // const images = ['💊', '🗡️', '👑'];
             // const backcolor = ['#ff0000', '#00ff00', '#0000ff']
@@ -30,16 +31,23 @@
             console.log(state);
             // const [imageState, setImageState] = React.useState('')
             // const [backcolorState, setBackcolorState] = React.useState('')
-            const handleClick = () => {
+            const handleClick = async () => {
                 console.log("handleClick")
-                const randomIndex = Math.floor(Math.random() * items.length);
-                console.log(randomIndex)
-                setState(items[randomIndex]);
+                // APIを呼び出す
+                const res = await fetch("https://gacha-sample-api.totery.workers.dev/items/random");
+                const data = await res.json();  // JSON形式に変換
+                console.log("取得したデータ:", data);
 
-                // setImageState(images[randomIndex]);
-                // setBackcolorState(backcolor[randomIndex])
+                // const randomIndex = Math.floor(Math.random() * items.length);
+                // console.log(randomIndex)
+                setState(data.item);
+                console.log("state", state);
+
 
             }
+
+
+
             return (<>
 
                 <main>
@@ -52,25 +60,21 @@
 
 
                             <button onClick={handleClick}>🎰 ガチャを引く</button>
-                            <div style={{ backgroundColor: state.backcolor }}>
+                            <div style={{ backgroundColor: state.backgroundColor }}>
                                 <h1>アイテム：{state.name}をゲットしました</h1>
-                                <p>{state.images}</p>
+                                <p>{state.icon}</p>
                             </div>
 
                         </div>
-                        <div>
+                        <div></div>
+                        <div></div>
 
-
-                        </div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </div>
 
 
 
 
-                </main></>);
+                </main ></>);
         }
 
         const container = document.getElementById('root');
